@@ -41,25 +41,31 @@ dcterms:title rdf:type owl:AnnotationProperty .
 ###  http://w3id.org/comptox/v0/hasAverageMass
 comptox:hasAverageMass rdf:type owl:DatatypeProperty ;
                                             rdfs:label "hasAverageMass";
-											dcterms:description "the average mass in g/mol".
-
+											rdfs:range xsd:string .
+											dcterms:description "the average mass in g/mol" ;
+											rdfs:range xsd:decimal . 
 
 ###  http://w3id.org/comptox/v0/hasCASRN
 <http://w3id.org/comptox/v0/hasCASRN> rdf:type owl:DatatypeProperty ;
-                                            rdfs:label "hasCASRN";
-											dcterms:description "the CAS Registry Number to link to CAS Registry and other databases of chemicals" .
+                                    rdfs:label "hasCASRN";
+									dcterms:description "the CAS Registry Number to link to CAS Registry and other databases of chemicals" ;
+									rdfs:subPropertyOf dcterms:identifier ;
+									rdfs:range xsd:string . 
 
 
 ###  http://w3id.org/comptox/v0/hasCarbonChainLength
 <http://w3id.org/comptox/v0/hasCarbonChainLength> rdf:type owl:AnnotationProperty ;
                                                   rdfs:label "hasCarbonChainLength" ;
-												  dcterms:description "the total number of Carbon Atoms present in the chemical" .
+												  dcterms:description "the total number of Carbon Atoms present in the chemical" ;
+												  rdfs:range xsd:nonNegativeInteger . 
 
 
 ###  http://w3id.org/comptox/v0/hasDTXSID
 <http://w3id.org/comptox/v0/hasDTXSID> rdf:type owl:DatatypeProperty ;
                                        rdfs:label "hasDTXSID" ;
-											dcterms:description "The DSSTOX substance ID (DTXID) assigned and used by the Environmental Protection Agency's CompTox Dashboard to identify the chemical" .
+											dcterms:description "The DSSTOX substance ID (DTXID) assigned and used by the Environmental Protection Agency's CompTox Dashboard to identify the chemical" ;
+											rdfs:subPropertyOf dcterms:identifier ;
+											rdfs:range xsd:string . 
 
 
 ###  http://w3id.org/comptox/v0/hasFunctionalGroup
