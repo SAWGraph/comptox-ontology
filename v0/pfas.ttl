@@ -206,11 +206,6 @@ skos:altLabel rdf:type owl:AnnotationProperty ;
 #    Classes
 #################################################################
 
-###  http://w3id.org/comptox/v0/CarbonChainLength
-<http://w3id.org/comptox/v0/CarbonChainLength> rdf:type owl:Class ;
-                                               rdfs:subClassOf <http://w3id.org/comptox/v0/PFASChemicalDescriptor> ;
-                                               rdfs:label "CarbonChainLength" .
-
 
 ###  http://w3id.org/comptox/v0/ChemicalEntity
 <http://w3id.org/comptox/v0/ChemicalEntity> rdf:type owl:Class ;
@@ -222,9 +217,13 @@ skos:altLabel rdf:type owl:AnnotationProperty ;
                                               rdfs:label "CompToxDashboard" .
 
 
+#################################################################
+#    Individuals
+#################################################################
+
+
 ###  http://w3id.org/comptox/v0/DTXSID00192353
-<http://w3id.org/comptox/v0/DTXSID00192353> rdf:type owl:Class ;
-                                            rdfs:subClassOf <http://w3id.org/comptox/v0/0000004_2_1> ;
+<http://w3id.org/comptox/v0/DTXSID00192353> rdf:type <http://w3id.org/comptox/v0/0000004_2_1> ;
                                             <http://w3id.org/comptox/v0/hasAverageMass> "528.18" ;
                                             <http://w3id.org/comptox/v0/hasCASRN> "39108-34-4" ;
                                             <http://w3id.org/comptox/v0/hasCarbonChainLength> "10" ;
@@ -240,8 +239,7 @@ skos:altLabel rdf:type owl:AnnotationProperty ;
 
 
 ###  http://w3id.org/comptox/v0/DTXSID00379268
-<http://w3id.org/comptox/v0/DTXSID00379268> rdf:type owl:Class ;
-                                            rdfs:subClassOf <http://w3id.org/comptox/v0/0000004_2_0> ;
+<http://w3id.org/comptox/v0/DTXSID00379268> rdf:type <http://w3id.org/comptox/v0/0000004_2_0> ;
                                             <http://w3id.org/comptox/v0/hasAverageMass> "242.093" ;
                                             <http://w3id.org/comptox/v0/hasCASRN> "356-02-5" ;
                                             <http://w3id.org/comptox/v0/hasCarbonChainLength> "6" ;
