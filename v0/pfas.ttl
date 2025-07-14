@@ -1,38 +1,65 @@
-@prefix : <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://w3id.org/comptox/v0/> .
+@prefix comptox <http://w3id.org/comptox/v0/>  .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix example: <http://example.com/0000003> .
-@base <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+@base <http://w3id.org/comptox/v0/> .
 
 [ rdf:type owl:Ontology
  ] .
+
 
 #################################################################
 #    Annotation properties
 #################################################################
 
+dcterms:created rdf:type owl:AnnotationProperty .
+
+dcterms:creator rdf:type owl:AnnotationProperty .
+
+dcterms:description rdf:type owl:AnnotationProperty .
+
+dcterms:issued rdf:type owl:AnnotationProperty .
+
+dcterms:modified rdf:type owl:AnnotationProperty .
+
+dcterms:publisher rdf:type owl:AnnotationProperty .
+
+dcterms:source rdf:type owl:AnnotationProperty .
+
+dcterms:title rdf:type owl:AnnotationProperty .
+
+#################################################################
+#    Data Properties
+#################################################################
+
 ###  http://w3id.org/comptox/v0/hasAverageMass
-<http://w3id.org/comptox/v0/hasAverageMass> rdf:type owl:AnnotationProperty ;
-                                            rdfs:label "hasAverageMass" .
+comptox:hasAverageMass rdf:type owl:DatatypeProperty ;
+                                            rdfs:label "hasAverageMass";
+											dcterms:description "the average mass in g/mol".
 
 
 ###  http://w3id.org/comptox/v0/hasCASRN
-<http://w3id.org/comptox/v0/hasCASRN> rdf:type owl:AnnotationProperty ;
-                                      rdfs:label "hasCASRN" .
+<http://w3id.org/comptox/v0/hasCASRN> rdf:type owl:DatatypeProperty ;
+                                            rdfs:label "hasCASRN";
+											dcterms:description "the CAS Registry Number to link to CAS Registry and other databases of chemicals" .
 
 
 ###  http://w3id.org/comptox/v0/hasCarbonChainLength
 <http://w3id.org/comptox/v0/hasCarbonChainLength> rdf:type owl:AnnotationProperty ;
-                                                  rdfs:label "hasCarbonChainLength" .
+                                                  rdfs:label "hasCarbonChainLength" ;
+												  dcterms:description "the total number of Carbon Atoms present in the chemical" .
 
 
 ###  http://w3id.org/comptox/v0/hasDTXSID
-<http://w3id.org/comptox/v0/hasDTXSID> rdf:type owl:AnnotationProperty ;
-                                       rdfs:label "hasDTXSID" .
+<http://w3id.org/comptox/v0/hasDTXSID> rdf:type owl:DatatypeProperty ;
+                                       rdfs:label "hasDTXSID" ;
+											dcterms:description "The DSSTOX substance ID (DTXID) assigned and used by the Environmental Protection Agency's CompTox Dashboard to identify the chemical" .
 
 
 ###  http://w3id.org/comptox/v0/hasFunctionalGroup
