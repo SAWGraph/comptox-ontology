@@ -1,0 +1,1067 @@
+@prefix : <http://www.w3.org/2002/07/owl#> .
+@prefix v1: <http://w3id.org/comptox/v1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix edamontology: <http://edamontology.org/> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://edamontology.org/data_1172
+edamontology:data_1172 rdf:type owl:AnnotationProperty .
+
+
+###  http://w3id.org/comptox/v1/hasAverageMass
+v1:hasAverageMass rdf:type owl:AnnotationProperty ;
+                  rdfs:label "hasAverageMass" .
+
+
+###  http://w3id.org/comptox/v1/hasCASRN
+v1:hasCASRN rdf:type owl:AnnotationProperty ;
+            rdfs:label "hasCASRN" .
+
+
+###  http://w3id.org/comptox/v1/hasCarbonChainLength
+v1:hasCarbonChainLength rdf:type owl:AnnotationProperty ;
+                        rdfs:label "hasCarbonChainLength" .
+
+
+###  http://w3id.org/comptox/v1/hasDTXSID
+v1:hasDTXSID rdf:type owl:AnnotationProperty .
+
+
+###  http://w3id.org/comptox/v1/hasFunctionalGroup
+v1:hasFunctionalGroup rdf:type owl:AnnotationProperty ;
+                      rdfs:label "hasFunctionalGroup" .
+
+
+###  http://w3id.org/comptox/v1/hasInChIKey
+v1:hasInChIKey rdf:type owl:AnnotationProperty ;
+               rdfs:label "hasInChIKey" .
+
+
+###  http://w3id.org/comptox/v1/hasNumberOfC-Cbonds
+v1:hasNumberOfC-Cbonds rdf:type owl:AnnotationProperty ;
+                       rdfs:label "hasNumberOfC-Cbonds" .
+
+
+###  http://w3id.org/comptox/v1/hasNumberOfC-Fbonds
+v1:hasNumberOfC-Fbonds rdf:type owl:AnnotationProperty ;
+                       rdfs:label "hasNumberOfC-FBonds" .
+
+
+###  http://w3id.org/comptox/v1/hasNumberOfCarbonAtoms
+v1:hasNumberOfCarbonAtoms rdf:type owl:AnnotationProperty ;
+                          rdfs:label "hasNumberOfCarbonAtoms" .
+
+
+###  http://w3id.org/comptox/v1/hasSMILES
+v1:hasSMILES rdf:type owl:AnnotationProperty ;
+             rdfs:label "hasSMILES" .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty ;
+              rdfs:label "alternative label" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://edamontology.org/data_1172
+edamontology:data_1172 rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf terms:identifier .
+
+
+###  http://purl.org/dc/terms/identifier
+terms:identifier rdf:type owl:DatatypeProperty ;
+                 rdfs:label "identifier" .
+
+
+###  http://w3id.org/comptox/v1/atmosphericHydroxylationRate
+v1:atmosphericHydroxylationRate rdf:type owl:DatatypeProperty ;
+                                rdfs:subPropertyOf v1:environmentalFateAndTransportData ;
+                                rdfs:label "atmosphericHydroxylationRate" .
+
+
+###  http://w3id.org/comptox/v1/bioconcentrationFactor
+v1:bioconcentrationFactor rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf v1:environmentalFateAndTransportData ;
+                          rdfs:label "bioconcentrationFactor" .
+
+
+###  http://w3id.org/comptox/v1/biodegradationHalfLife
+v1:biodegradationHalfLife rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf v1:environmentalFateAndTransportData ;
+                          rdfs:label "biodegradationHalfLife" .
+
+
+###  http://w3id.org/comptox/v1/biomonitoringData
+v1:biomonitoringData rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf v1:exposureData ;
+                     rdfs:label "biomonitoringData" .
+
+
+###  http://w3id.org/comptox/v1/chemicalFunctionalUse
+v1:chemicalFunctionalUse rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf v1:exposureData ;
+                         rdfs:label "chemicalFunctionalUse" .
+
+
+###  http://w3id.org/comptox/v1/chemicalWeightFraction
+v1:chemicalWeightFraction rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf v1:exposureData ;
+                          rdfs:label "chemicalWeightFraction" .
+
+
+###  http://w3id.org/comptox/v1/environmentalFateAndTransportData
+v1:environmentalFateAndTransportData rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain v1:EnvironmentalFateAndTransport ;
+                                     rdfs:label "environmentalFateAndTransportData" .
+
+
+###  http://w3id.org/comptox/v1/exposureData
+v1:exposureData rdf:type owl:DatatypeProperty ;
+                rdfs:domain v1:Exposure ;
+                rdfs:label "exposureData" .
+
+
+###  http://w3id.org/comptox/v1/exposurePredictions
+v1:exposurePredictions rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf v1:exposureData ;
+                       rdfs:label "exposurePredictions" .
+
+
+###  http://w3id.org/comptox/v1/fishBiotransformationHalfLifeKm
+v1:fishBiotransformationHalfLifeKm rdf:type owl:DatatypeProperty ;
+                                   rdfs:subPropertyOf v1:environmentalFateAndTransportData ;
+                                   rdfs:label "fishBiotransformationHalfLifeKm" .
+
+
+###  http://w3id.org/comptox/v1/hasDTXSID
+v1:hasDTXSID rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf terms:identifier .
+
+
+###  http://w3id.org/comptox/v1/productAndUseCategories
+v1:productAndUseCategories rdf:type owl:DatatypeProperty ;
+                           rdfs:subPropertyOf v1:exposureData ;
+                           rdfs:label "productAndUseCategories" .
+
+
+###  http://w3id.org/comptox/v1/productionVolume
+v1:productionVolume rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf v1:exposureData ;
+                    rdfs:label "productionVolume" .
+
+
+###  http://w3id.org/comptox/v1/readyBiodegradability
+v1:readyBiodegradability rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf v1:environmentalFateAndTransportData ;
+                         rdfs:label "readyBiodegradability" .
+
+
+###  http://w3id.org/comptox/v1/soilAdsorptionCoefficientKoc
+v1:soilAdsorptionCoefficientKoc rdf:type owl:DatatypeProperty ;
+                                rdfs:subPropertyOf v1:environmentalFateAndTransportData ;
+                                rdfs:label "soilAdsorptionCoefficientKoc" .
+
+
+###  http://w3id.org/comptox/v1/toxicsReleaseInventory
+v1:toxicsReleaseInventory rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf v1:exposureData ;
+                          rdfs:label "toxicsReleaseInventory" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://w3id.org/comptox/v1/CarbonChainLength
+v1:CarbonChainLength rdf:type owl:Class ;
+                     rdfs:subClassOf v1:PFASChemicalDescriptor ;
+                     rdfs:label "CarbonChainLength" .
+
+
+###  http://w3id.org/comptox/v1/ChemicalEntity
+v1:ChemicalEntity rdf:type owl:Class ;
+                  rdfs:label "ChemicalEntity" .
+
+
+###  http://w3id.org/comptox/v1/CompToxDashboard
+v1:CompToxDashboard rdf:type owl:Class ;
+                    rdfs:label "CompToxDashboard" .
+
+
+###  http://w3id.org/comptox/v1/EnvironmentalFateAndTransport
+v1:EnvironmentalFateAndTransport rdf:type owl:Class ;
+                                 rdfs:label "EnvironmentalFateAndTransport" .
+
+
+###  http://w3id.org/comptox/v1/Exposure
+v1:Exposure rdf:type owl:Class ;
+            rdfs:subClassOf v1:CompToxDashboard ;
+            rdfs:label "Exposure" .
+
+
+###  http://w3id.org/comptox/v1/FunctionalGroup
+v1:FunctionalGroup rdf:type owl:Class ;
+                   rdfs:subClassOf v1:PFASChemicalDescriptor ;
+                   rdfs:label "FunctionalGroup" .
+
+
+###  http://w3id.org/comptox/v1/HazardData
+v1:HazardData rdf:type owl:Class ;
+              rdfs:subClassOf v1:CompToxDashboard ;
+              rdfs:label "HazardData" .
+
+
+###  http://w3id.org/comptox/v1/NumberOfFluorineAtoms
+v1:NumberOfFluorineAtoms rdf:type owl:Class ;
+                         rdfs:subClassOf v1:PFASChemicalDescriptor ;
+                         rdfs:label "NumberOfFluorineAtoms" .
+
+
+###  http://w3id.org/comptox/v1/OPERA
+v1:OPERA rdf:type owl:Class ;
+         rdfs:label "OPERA" .
+
+
+###  http://w3id.org/comptox/v1/PFASChemical
+v1:PFASChemical rdf:type owl:Class ;
+                rdfs:subClassOf v1:ChemicalEntity ;
+                rdfs:label "PFASChemical" .
+
+
+###  http://w3id.org/comptox/v1/PFASChemicalDescriptor
+v1:PFASChemicalDescriptor rdf:type owl:Class ;
+                          rdfs:label "PFASChemicalDescriptor" .
+
+
+###  http://w3id.org/comptox/v1/PhyschemProperty
+v1:PhyschemProperty rdf:type owl:Class ;
+                    rdfs:subClassOf v1:CompToxDashboard ;
+                    rdfs:label "PhyschemProperty" .
+
+
+###  http://w3id.org/comptox/v1/PolymerOrNonPolymer
+v1:PolymerOrNonPolymer rdf:type owl:Class ;
+                       rdfs:subClassOf v1:PFASChemicalDescriptor ;
+                       rdfs:label "PolymerOrNonPolymer" .
+
+
+###  http://w3id.org/comptox/v1/SafetyData
+v1:SafetyData rdf:type owl:Class ;
+              rdfs:subClassOf v1:CompToxDashboard ;
+              rdfs:label "SafetyData" .
+
+
+###  http://w3id.org/comptox/v1/0000004_0
+<http://w3id.org/comptox/v1/0000004_0> rdf:type owl:Class ;
+                                       rdfs:subClassOf v1:PFASChemical ;
+                                       rdfs:label "Per/Polyfluoroalkyl acids" .
+
+
+###  http://w3id.org/comptox/v1/0000004_1
+<http://w3id.org/comptox/v1/0000004_1> rdf:type owl:Class ;
+                                       rdfs:subClassOf v1:PFASChemical ;
+                                       rdfs:label "Per/Polyfluoroalkyl ether acids" .
+
+
+###  http://w3id.org/comptox/v1/0000004_2
+<http://w3id.org/comptox/v1/0000004_2> rdf:type owl:Class ;
+                                       rdfs:subClassOf v1:PFASChemical ;
+                                       rdfs:label "Fluorotelomer substances" .
+
+
+###  http://w3id.org/comptox/v1/0000004_3
+<http://w3id.org/comptox/v1/0000004_3> rdf:type owl:Class ;
+                                       rdfs:subClassOf v1:PFASChemical ;
+                                       rdfs:label "Perfluoroalkane sulfonamides" .
+
+
+###  http://w3id.org/comptox/v1/0000004_4
+<http://w3id.org/comptox/v1/0000004_4> rdf:type owl:Class ;
+                                       rdfs:subClassOf v1:PFASChemical ;
+                                       rdfs:label "Perfluoroalkane sulfonamido substances" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID00192353
+<http://w3id.org/pfas/v1/DTXSID00192353> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://w3id.org/pfas/v1/FTSAs> ;
+                                         edamontology:data_1172 "3016044" ;
+                                         v1:hasAverageMass "528.18" ;
+                                         v1:hasCASRN "39108-34-4" ;
+                                         v1:hasCarbonChainLength "10" ;
+                                         v1:hasDTXSID "192353" ;
+                                         v1:hasFunctionalGroup "Sulfonic acid (-SO_H)" ;
+                                         v1:hasInChIKey "ALVYVCQIFHTIRD-UHFFFAOYSA-N" ;
+                                         v1:hasNumberOfC-Cbonds "9" ;
+                                         v1:hasNumberOfC-Fbonds "17" ;
+                                         v1:hasNumberOfCarbonAtoms "10" ;
+                                         v1:hasSMILES "OS(=O)(=O)CCC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F" ;
+                                         rdfs:label "8:2 Fluorotelomer sulfonic acid" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID00379268
+<http://w3id.org/pfas/v1/DTXSID00379268> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://w3id.org/pfas/v1/FTCAs> ;
+                                         edamontology:data_1172 "2774909" ;
+                                         v1:hasAverageMass "242.093" ;
+                                         v1:hasCASRN "356-02-5" ;
+                                         v1:hasCarbonChainLength "6" ;
+                                         v1:hasDTXSID "379268" ;
+                                         v1:hasFunctionalGroup "Carboxylic acids (-COOH)" ;
+                                         v1:hasInChIKey "ISFKSWMQWIRDNC-UHFFFAOYSA-N" ;
+                                         v1:hasNumberOfC-Cbonds "5" ;
+                                         v1:hasNumberOfC-Fbonds "7" ;
+                                         v1:hasNumberOfCarbonAtoms "6" ;
+                                         v1:hasSMILES "OC(=O)CCC(F)(F)C(F)(F)C(F)(F)F" ;
+                                         rdfs:label "3:3 Fluorotelomer carboxylic acid" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID1032646
+<http://w3id.org/pfas/v1/DTXSID1032646> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://w3id.org/pfas/v1/N-EtFASAs> ;
+                                        edamontology:data_1172 "77797" ;
+                                        v1:hasAverageMass "527.2" ;
+                                        v1:hasCASRN "4151-50-2" ;
+                                        v1:hasCarbonChainLength "10" ;
+                                        v1:hasDTXSID "1032646" ;
+                                        v1:hasFunctionalGroup "N-ethyl sulfonamide (-SO_-NHCH_CH_)" ;
+                                        v1:hasInChIKey "CCEKAJIANROZEO-UHFFFAOYSA-N" ;
+                                        v1:hasNumberOfC-Cbonds "7" ;
+                                        v1:hasNumberOfC-Fbonds "17" ;
+                                        v1:hasNumberOfCarbonAtoms "10" ;
+                                        v1:hasSMILES "CCNS(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F" ;
+                                        rdfs:label "N-Ethylperfluorooctane sulfonamide" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID1037303
+<http://w3id.org/pfas/v1/DTXSID1037303> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://w3id.org/pfas/v1/PFCAs> ;
+                                        edamontology:data_1172 "67818" ;
+                                        v1:hasAverageMass "364.062" ;
+                                        v1:hasCASRN "375-85-9" ;
+                                        v1:hasCarbonChainLength "7" ;
+                                        v1:hasDTXSID "1037303" ;
+                                        v1:hasFunctionalGroup "Carboxylic acids (-COOH)" ;
+                                        v1:hasInChIKey "ZWBAMYVPMDSJGQ-UHFFFAOYSA-N" ;
+                                        v1:hasNumberOfC-Cbonds "6" ;
+                                        v1:hasNumberOfC-Fbonds "13" ;
+                                        v1:hasNumberOfCarbonAtoms "7" ;
+                                        v1:hasSMILES "OC(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F" ;
+                                        rdfs:label "Perfluoroheptanoic acid" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID10624392
+<http://w3id.org/pfas/v1/DTXSID10624392> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://w3id.org/pfas/v1/N-MeFASAAs> ;
+                                         edamontology:data_1172 "22286931" ;
+                                         v1:hasAverageMass "571.2" ;
+                                         v1:hasCASRN "2355-31-9" ;
+                                         v1:hasCarbonChainLength "11" ;
+                                         v1:hasDTXSID "10624392" ;
+                                         v1:hasFunctionalGroup "Carboxylic acid (-COOH), and� N-methyl sulfonamide ( -SO_-NHCH_)" ;
+                                         v1:hasInChIKey "QNDHIRFIMVNHBN-UHFFFAOYSA-N" ;
+                                         v1:hasNumberOfC-Cbonds "8" ;
+                                         v1:hasNumberOfC-Fbonds "17" ;
+                                         v1:hasNumberOfCarbonAtoms "11" ;
+                                         v1:hasSMILES "CN(CC(O)=O)S(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F" ;
+                                         rdfs:label "2-(N-Methylperfluorooctanesulfonamido)acetic acid" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID1067629
+<http://w3id.org/pfas/v1/DTXSID1067629> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://w3id.org/pfas/v1/N-MeFASAs> ;
+                                        edamontology:data_1172 "3034468" ;
+                                        v1:hasAverageMass "513.17" ;
+                                        v1:hasCASRN "31506-32-8" ;
+                                        v1:hasCarbonChainLength "9" ;
+                                        v1:hasDTXSID "1067629" ;
+                                        v1:hasFunctionalGroup "N-methyl sulfonamide (-SO_-NHCH_)" ;
+                                        v1:hasInChIKey "SRMWNTGHXHOWBT-UHFFFAOYSA-N" ;
+                                        v1:hasNumberOfC-Cbonds "7" ;
+                                        v1:hasNumberOfC-Fbonds "17" ;
+                                        v1:hasNumberOfCarbonAtoms "9" ;
+                                        v1:hasSMILES "CNS(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F" ;
+                                        rdfs:label "N-Methylperfluorooctanesulfonamide" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID20873011
+<http://w3id.org/pfas/v1/DTXSID20873011> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://w3id.org/pfas/v1/PFSAs> ;
+                                         edamontology:data_1172 "3018866" ;
+                                         v1:hasAverageMass "700.16" ;
+                                         v1:hasCASRN "79780-39-5" ;
+                                         v1:hasCarbonChainLength "12" ;
+                                         v1:hasDTXSID "20873011" ;
+                                         v1:hasFunctionalGroup "Sulfonic acid (-SO_H)" ;
+                                         v1:hasInChIKey "CFCRODHVHXGTPC-UHFFFAOYSA-N" ;
+                                         v1:hasNumberOfC-Cbonds "11" ;
+                                         v1:hasNumberOfC-Fbonds "25" ;
+                                         v1:hasNumberOfCarbonAtoms "12" ;
+                                         v1:hasSMILES "OS(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F" ;
+                                         rdfs:label "Perfluorododecanesulfonic acid" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID20874028
+<http://w3id.org/pfas/v1/DTXSID20874028> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://w3id.org/pfas/v1/FTCAs> ;
+                                         edamontology:data_1172 "14632790" ;
+                                         v1:hasAverageMass "342.108" ;
+                                         v1:hasCASRN "914637-49-3" ;
+                                         v1:hasCarbonChainLength "8" ;
+                                         v1:hasDTXSID "20874028" ;
+                                         v1:hasFunctionalGroup "Carboxylic acids (-COOH)" ;
+                                         v1:hasInChIKey "ABFCFCPCGMHSRX-UHFFFAOYSA-N" ;
+                                         v1:hasNumberOfC-Cbonds "7" ;
+                                         v1:hasNumberOfC-Fbonds "11" ;
+                                         v1:hasNumberOfCarbonAtoms "8" ;
+                                         v1:hasSMILES "OC(=O)CCC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F" ;
+                                         rdfs:label "2H,2H,3H,3H-Perfluorooctanoic acid" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID3031860
+<http://w3id.org/pfas/v1/DTXSID3031860> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://w3id.org/pfas/v1/PFCAs> ;
+                                        edamontology:data_1172 "9555" ;
+                                        v1:hasAverageMass "514.086" ;
+                                        v1:hasCASRN "335-76-2" ;
+                                        v1:hasCarbonChainLength "10" ;
+                                        v1:hasDTXSID "3031860" ;
+                                        v1:hasFunctionalGroup "Carboxylic acids (-COOH)" ;
+                                        v1:hasInChIKey "PCIUEQPBYFRTEM-UHFFFAOYSA-N" ;
+                                        v1:hasNumberOfC-Cbonds "9" ;
+                                        v1:hasNumberOfC-Fbonds "19" ;
+                                        v1:hasNumberOfCarbonAtoms "10" ;
+                                        v1:hasSMILES "OC(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F" ;
+                                        rdfs:label "Perfluorodecanoic acid" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID3031862
+<http://w3id.org/pfas/v1/DTXSID3031862> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://w3id.org/pfas/v1/PFCAs> ;
+                                        edamontology:data_1172 "67542" ;
+                                        v1:hasAverageMass "314.054" ;
+                                        v1:hasCASRN "307-24-4" ;
+                                        v1:hasCarbonChainLength "6" ;
+                                        v1:hasDTXSID "3031862" ;
+                                        v1:hasFunctionalGroup "Carboxylic acids (-COOH)" ;
+                                        v1:hasInChIKey "PXUULQAPEKKVAH-UHFFFAOYSA-N" ;
+                                        v1:hasNumberOfC-Cbonds "5" ;
+                                        v1:hasNumberOfC-Fbonds "11" ;
+                                        v1:hasNumberOfCarbonAtoms "6" ;
+                                        v1:hasSMILES "OC(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F" ;
+                                        rdfs:label "Perfluorohexanoic acid" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID3031864
+<http://w3id.org/pfas/v1/DTXSID3031864> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://w3id.org/pfas/v1/PFSAs> ;
+                                        edamontology:data_1172 "74483" ;
+                                        v1:hasAverageMass "500.13" ;
+                                        v1:hasCASRN "1763-23-1" ;
+                                        v1:hasCarbonChainLength "8" ;
+                                        v1:hasDTXSID "3031864" ;
+                                        v1:hasFunctionalGroup "Sulfonic acid (-SO_H)" ;
+                                        v1:hasInChIKey "YFSUTJLHUFNCNZ-UHFFFAOYSA-N" ;
+                                        v1:hasNumberOfC-Cbonds "7" ;
+                                        v1:hasNumberOfC-Fbonds "17" ;
+                                        v1:hasNumberOfCarbonAtoms "8" ;
+                                        v1:hasSMILES "OS(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F" ;
+                                        rdfs:label "Perfluorooctanesulfonic acid" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID30382063
+<http://w3id.org/pfas/v1/DTXSID30382063> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://w3id.org/pfas/v1/PFECAs> ;
+                                         edamontology:data_1172 "2782393" ;
+                                         v1:hasAverageMass "296.045" ;
+                                         v1:hasCASRN "151772-58-6" ;
+                                         v1:hasCarbonChainLength "5" ;
+                                         v1:hasDTXSID "30382063" ;
+                                         v1:hasFunctionalGroup "Carboxylic acids (-COOH)" ;
+                                         v1:hasInChIKey "PPWRLPJIHGWGFH-UHFFFAOYSA-N" ;
+                                         v1:hasNumberOfC-Cbonds "2" ;
+                                         v1:hasNumberOfC-Fbonds "9" ;
+                                         v1:hasNumberOfCarbonAtoms "5" ;
+                                         v1:hasSMILES "OC(=O)C(F)(F)OC(F)(F)C(F)(F)OC(F)(F)F" ;
+                                         rdfs:label "Perfluoro-3,6-dioxaheptanoic acid" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID3038939
+<http://w3id.org/pfas/v1/DTXSID3038939> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://w3id.org/pfas/v1/FASAa> ;
+                                        edamontology:data_1172 "69785" ;
+                                        v1:hasAverageMass "499.14" ;
+                                        v1:hasCASRN "754-91-6" ;
+                                        v1:hasCarbonChainLength "8" ;
+                                        v1:hasDTXSID "3038939" ;
+                                        v1:hasFunctionalGroup "Sulfonamide� (-SO_NH_)" ;
+                                        v1:hasInChIKey "RRRXPPIDPYTNJG-UHFFFAOYSA-N" ;
+                                        v1:hasNumberOfC-Cbonds "7" ;
+                                        v1:hasNumberOfC-Fbonds "17" ;
+                                        v1:hasNumberOfCarbonAtoms "8" ;
+                                        v1:hasSMILES "NS(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F" ;
+                                        rdfs:label "Perfluorooctanesulfonamide" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID3040148
+<http://w3id.org/pfas/v1/DTXSID3040148> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://w3id.org/pfas/v1/PFSAs> ;
+                                        edamontology:data_1172 "67636" ;
+                                        v1:hasAverageMass "600.14" ;
+                                        v1:hasCASRN "335-77-3" ;
+                                        v1:hasCarbonChainLength "10" ;
+                                        v1:hasDTXSID "3040148" ;
+                                        v1:hasFunctionalGroup "Sulfonic acid (-SO_H)" ;
+                                        v1:hasInChIKey "HYWZIAVPBSTISZ-UHFFFAOYSA-N" ;
+                                        v1:hasNumberOfC-Cbonds "9" ;
+                                        v1:hasNumberOfC-Fbonds "21" ;
+                                        v1:hasNumberOfCarbonAtoms "10" ;
+                                        v1:hasSMILES "OS(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F" ;
+                                        rdfs:label "Perfluorodecanesulfonic acid" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID3059921
+<http://w3id.org/pfas/v1/DTXSID3059921> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://w3id.org/pfas/v1/PFCAs> ;
+                                        edamontology:data_1172 "67822" ;
+                                        v1:hasAverageMass "714.117" ;
+                                        v1:hasCASRN "376-06-7" ;
+                                        v1:hasCarbonChainLength "14" ;
+                                        v1:hasDTXSID "3059921" ;
+                                        v1:hasFunctionalGroup "Carboxylic acids (-COOH)" ;
+                                        v1:hasInChIKey "RUDINRUXCKIXAJ-UHFFFAOYSA-N" ;
+                                        v1:hasNumberOfC-Cbonds "13" ;
+                                        v1:hasNumberOfC-Fbonds "27" ;
+                                        v1:hasNumberOfCarbonAtoms "14" ;
+                                        v1:hasSMILES "OC(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F" ;
+                                        rdfs:label "Perfluorotetradecanoic acid" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID30891564
+<http://w3id.org/pfas/v1/DTXSID30891564> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://w3id.org/pfas/v1/FTSAs> ;
+                                         edamontology:data_1172 "20734543" ;
+                                         v1:hasAverageMass "328.15" ;
+                                         v1:hasCASRN "757124-72-4" ;
+                                         v1:hasCarbonChainLength "6" ;
+                                         v1:hasDTXSID "30891564" ;
+                                         v1:hasFunctionalGroup "Sulfonic acid (-SO_H)" ;
+                                         v1:hasInChIKey "TXGIGTRUEITPSC-UHFFFAOYSA-N" ;
+                                         v1:hasNumberOfC-Cbonds "5" ;
+                                         v1:hasNumberOfC-Fbonds "9" ;
+                                         v1:hasNumberOfCarbonAtoms "6" ;
+                                         v1:hasSMILES "OS(=O)(=O)CCC(F)(F)C(F)(F)C(F)(F)C(F)(F)F" ;
+                                         rdfs:label "4:2 Fluorotelomer sulfonic acid" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID4059916
+<http://w3id.org/pfas/v1/DTXSID4059916> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://w3id.org/pfas/v1/PFCAs> ;
+                                        edamontology:data_1172 "9777" ;
+                                        v1:hasAverageMass "214.039" ;
+                                        v1:hasCASRN "375-22-4" ;
+                                        v1:hasCarbonChainLength "4" ;
+                                        v1:hasDTXSID "4059916" ;
+                                        v1:hasFunctionalGroup "Carboxylic acids (-COOH)" ;
+                                        v1:hasInChIKey "YPJUNDFVDDCYIH-UHFFFAOYSA-N" ;
+                                        v1:hasNumberOfC-Cbonds "3" ;
+                                        v1:hasNumberOfC-Fbonds "7" ;
+                                        v1:hasNumberOfCarbonAtoms "4" ;
+                                        v1:hasSMILES "OC(=O)C(F)(F)C(F)(F)C(F)(F)F" ;
+                                        rdfs:label "Perfluorobutanoic acid" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID40881350
+<http://w3id.org/pfas/v1/DTXSID40881350> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://w3id.org/pfas/v1/PFECAs> ;
+                                         edamontology:data_1172 "52915299" ;
+                                         v1:hasAverageMass "378.07" ;
+                                         v1:hasCASRN "919005-14-4" ;
+                                         v1:hasCarbonChainLength "7" ;
+                                         v1:hasDTXSID "40881350" ;
+                                         v1:hasFunctionalGroup "Carboxylic acids (-COOH)" ;
+                                         v1:hasInChIKey "AFDRCEOKCOUICI-UHFFFAOYSA-N" ;
+                                         v1:hasNumberOfC-Cbonds "4" ;
+                                         v1:hasNumberOfC-Fbonds "12" ;
+                                         v1:hasNumberOfCarbonAtoms "7" ;
+                                         v1:hasSMILES "OC(=O)C(F)(F)C(F)OC(F)(F)C(F)(F)C(F)(F)OC(F)(F)F" ;
+                                         rdfs:label "4,8-Dioxa-3H-perfluorononanoic acid" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID40892507
+<http://w3id.org/pfas/v1/DTXSID40892507> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://w3id.org/pfas/v1/PFESAs> ;
+                                         edamontology:data_1172 "15099039" ;
+                                         v1:hasAverageMass "632.59" ;
+                                         v1:hasCASRN "763051-92-9" ;
+                                         v1:hasCarbonChainLength "10" ;
+                                         v1:hasDTXSID "40892507" ;
+                                         v1:hasFunctionalGroup "Sulfonic acid (-SO_H)" ;
+                                         v1:hasInChIKey "SZVGIJOITCPDPM-UHFFFAOYSA-N" ;
+                                         v1:hasNumberOfC-Cbonds "8" ;
+                                         v1:hasNumberOfC-Fbonds "20" ;
+                                         v1:hasNumberOfCarbonAtoms "10" ;
+                                         v1:hasSMILES "OS(=O)(=O)C(F)(F)C(F)(F)OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)Cl" ;
+                                         rdfs:label "11-Chloroperfluoro-3-oxaundecanesulfonic acid" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID5030030
+<http://w3id.org/pfas/v1/DTXSID5030030> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://w3id.org/pfas/v1/PFSAs> ;
+                                        edamontology:data_1172 "67815" ;
+                                        v1:hasAverageMass "300.09" ;
+                                        v1:hasCASRN "375-73-5" ;
+                                        v1:hasCarbonChainLength "4" ;
+                                        v1:hasDTXSID "5030030" ;
+                                        v1:hasFunctionalGroup "Sulfonic acid (-SO_H)" ;
+                                        v1:hasInChIKey "JGTNAGYHADQMCM-UHFFFAOYSA-N" ;
+                                        v1:hasNumberOfC-Cbonds "3" ;
+                                        v1:hasNumberOfC-Fbonds "9" ;
+                                        v1:hasNumberOfCarbonAtoms "4" ;
+                                        v1:hasSMILES "OS(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F" ;
+                                        rdfs:label "Perfluorobutanesulfonic acid" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID50379814
+<http://w3id.org/pfas/v1/DTXSID50379814> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://w3id.org/pfas/v1/PFESAs> ;
+                                         edamontology:data_1172 "2776108" ;
+                                         v1:hasAverageMass "316.09" ;
+                                         v1:hasCASRN "113507-82-7" ;
+                                         v1:hasCarbonChainLength "4" ;
+                                         v1:hasDTXSID "50379814" ;
+                                         v1:hasFunctionalGroup "Sulfonic acid (-SO_H)" ;
+                                         v1:hasInChIKey "RJGUAQKOHAABLK-UHFFFAOYSA-N" ;
+                                         v1:hasNumberOfC-Cbonds "2" ;
+                                         v1:hasNumberOfC-Fbonds "9" ;
+                                         v1:hasNumberOfCarbonAtoms "4" ;
+                                         v1:hasSMILES "OS(=O)(=O)C(F)(F)C(F)(F)OC(F)(F)C(F)(F)F" ;
+                                         rdfs:label "Perfluoro-2-ethoxyethanesulfonic acid" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID5062760
+<http://w3id.org/pfas/v1/DTXSID5062760> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://w3id.org/pfas/v1/N-EtFASAAs> ;
+                                        edamontology:data_1172 "18134" ;
+                                        v1:hasAverageMass "585.23" ;
+                                        v1:hasCASRN "2991-50-6" ;
+                                        v1:hasCarbonChainLength "12" ;
+                                        v1:hasDTXSID "5062760" ;
+                                        v1:hasFunctionalGroup "Carboxylic acid ( -COOH), and N-ethyl sulfonamide � ( -SO_-NHCH_CH_)" ;
+                                        v1:hasInChIKey "CKRXVVGETMYFIO-UHFFFAOYSA-N" ;
+                                        v1:hasNumberOfC-Cbonds "9" ;
+                                        v1:hasNumberOfC-Fbonds "17" ;
+                                        v1:hasNumberOfCarbonAtoms "12" ;
+                                        v1:hasSMILES "CCN(CC(O)=O)S(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F" ;
+                                        rdfs:label "2-(N-Ethylperfluorooctanesulfonamido)acetic acid" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID6027426
+<http://w3id.org/pfas/v1/DTXSID6027426> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://w3id.org/pfas/v1/N-EtFASAs> ;
+                                        edamontology:data_1172 "74322" ;
+                                        v1:hasAverageMass "571.25" ;
+                                        v1:hasCASRN "1691-99-2" ;
+                                        v1:hasCarbonChainLength "12" ;
+                                        v1:hasDTXSID "6027426" ;
+                                        v1:hasFunctionalGroup "N-ethyl sulfonamide (-SO_-NHCH_CH_)" ;
+                                        v1:hasInChIKey "HUFHNYZNTFSKCT-UHFFFAOYSA-N" ;
+                                        v1:hasNumberOfC-Cbonds "9" ;
+                                        v1:hasNumberOfC-Fbonds "17" ;
+                                        v1:hasNumberOfCarbonAtoms "12" ;
+                                        v1:hasSMILES "CCN(CCO)S(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F" ;
+                                        rdfs:label "N-Ethyl-N-(2-hydroxyethyl)perfluorooctane sulfonamide" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID60500450
+<http://w3id.org/pfas/v1/DTXSID60500450> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://w3id.org/pfas/v1/PFECAs> ;
+                                         edamontology:data_1172 "12498036" ;
+                                         v1:hasAverageMass "280.046" ;
+                                         v1:hasCASRN "863090-89-5" ;
+                                         v1:hasCarbonChainLength "5" ;
+                                         v1:hasDTXSID "60500450" ;
+                                         v1:hasFunctionalGroup "Carboxylic acids (-COOH)" ;
+                                         v1:hasInChIKey "CZTBTZZANBJSLY-UHFFFAOYSA-N" ;
+                                         v1:hasNumberOfC-Cbonds "3" ;
+                                         v1:hasNumberOfC-Fbonds "9" ;
+                                         v1:hasNumberOfCarbonAtoms "5" ;
+                                         v1:hasSMILES "OC(=O)C(F)(F)C(F)(F)C(F)(F)OC(F)(F)F" ;
+                                         rdfs:label "Perfluoro(4-methoxybutanoic acid)" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID6062599
+<http://w3id.org/pfas/v1/DTXSID6062599> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://w3id.org/pfas/v1/PFCAs> ;
+                                        edamontology:data_1172 "75921" ;
+                                        v1:hasAverageMass "264.047" ;
+                                        v1:hasCASRN "2706-90-3" ;
+                                        v1:hasCarbonChainLength "5" ;
+                                        v1:hasDTXSID "6062599" ;
+                                        v1:hasFunctionalGroup "Carboxylic acids (-COOH)" ;
+                                        v1:hasInChIKey "CXZGQIAOTKWCDB-UHFFFAOYSA-N" ;
+                                        v1:hasNumberOfC-Cbonds "4" ;
+                                        v1:hasNumberOfC-Fbonds "9" ;
+                                        v1:hasNumberOfCarbonAtoms "5" ;
+                                        v1:hasSMILES "OC(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F" ;
+                                        rdfs:label "Perfluoropentanoic acid" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID6067331
+<http://w3id.org/pfas/v1/DTXSID6067331> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://w3id.org/pfas/v1/FTSAs> ;
+                                        edamontology:data_1172 "119688" ;
+                                        v1:hasAverageMass "428.16" ;
+                                        v1:hasCASRN "27619-97-2" ;
+                                        v1:hasCarbonChainLength "8" ;
+                                        v1:hasDTXSID "6067331" ;
+                                        v1:hasFunctionalGroup "Sulfonic acid (-SO_H)" ;
+                                        v1:hasInChIKey "VIONGDJUYAYOPU-UHFFFAOYSA-N" ;
+                                        v1:hasNumberOfC-Cbonds "7" ;
+                                        v1:hasNumberOfC-Fbonds "13" ;
+                                        v1:hasNumberOfCarbonAtoms "8" ;
+                                        v1:hasSMILES "OS(=O)(=O)CCC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F" ;
+                                        rdfs:label "6:2 Fluorotelomer sulfonic acid" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID70191136
+<http://w3id.org/pfas/v1/DTXSID70191136> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://w3id.org/pfas/v1/PFECAs> ;
+                                         edamontology:data_1172 "120228" ;
+                                         v1:hasAverageMass "230.038" ;
+                                         v1:hasCASRN "377-73-1" ;
+                                         v1:hasCarbonChainLength "4" ;
+                                         v1:hasDTXSID "70191136" ;
+                                         v1:hasFunctionalGroup "Carboxylic acids (-COOH)" ;
+                                         v1:hasInChIKey "AGIMOOYNBDLMJV-UHFFFAOYSA-N" ;
+                                         v1:hasNumberOfC-Cbonds "2" ;
+                                         v1:hasNumberOfC-Fbonds "7" ;
+                                         v1:hasNumberOfCarbonAtoms "4" ;
+                                         v1:hasSMILES "OC(=O)C(F)(F)C(F)(F)OC(F)(F)F" ;
+                                         rdfs:label "Perfluoro-3-methoxypropanoic acid" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID7027831
+<http://w3id.org/pfas/v1/DTXSID7027831> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://w3id.org/pfas/v1/N-MeFASAs> ;
+                                        edamontology:data_1172 "90507" ;
+                                        v1:hasAverageMass "557.22" ;
+                                        v1:hasCASRN "24448-09-7" ;
+                                        v1:hasCarbonChainLength "11" ;
+                                        v1:hasDTXSID "7027831" ;
+                                        v1:hasFunctionalGroup "N-methyl sulfonamide (-SO_-NHCH_)" ;
+                                        v1:hasInChIKey "PLGACQRCZCVKGK-UHFFFAOYSA-N" ;
+                                        v1:hasNumberOfC-Cbonds "8" ;
+                                        v1:hasNumberOfC-Fbonds "17" ;
+                                        v1:hasNumberOfCarbonAtoms "11" ;
+                                        v1:hasSMILES "CN(CCO)S(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F" ;
+                                        rdfs:label "N-Methyl-N-(2-hydroxyethyl)perfluorooctanesulfonamide" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID7040150
+<http://w3id.org/pfas/v1/DTXSID7040150> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://w3id.org/pfas/v1/PFSAs> ;
+                                        edamontology:data_1172 "67734" ;
+                                        v1:hasAverageMass "400.11" ;
+                                        v1:hasCASRN "355-46-4" ;
+                                        v1:hasCarbonChainLength "6" ;
+                                        v1:hasDTXSID "7040150" ;
+                                        v1:hasFunctionalGroup "Sulfonic acid (-SO_H)" ;
+                                        v1:hasInChIKey "QZHDEAJFRJCDMF-UHFFFAOYSA-N" ;
+                                        v1:hasNumberOfC-Cbonds "5" ;
+                                        v1:hasNumberOfC-Fbonds "13" ;
+                                        v1:hasNumberOfCarbonAtoms "6" ;
+                                        v1:hasSMILES "OS(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F" ;
+                                        rdfs:label "Perfluorohexanesulfonic acid" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID70880215
+<http://w3id.org/pfas/v1/DTXSID70880215> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://w3id.org/pfas/v1/PFECAs> ;
+                                         edamontology:data_1172 "114481" ;
+                                         v1:hasAverageMass "330.053" ;
+                                         v1:hasCASRN "13252-13-6" ;
+                                         v1:hasCarbonChainLength "6" ;
+                                         v1:hasDTXSID "70880215" ;
+                                         v1:hasFunctionalGroup "Carboxylic acids (-COOH)" ;
+                                         v1:hasInChIKey "CSEBNABAWMZWIF-UHFFFAOYSA-N" ;
+                                         v1:hasNumberOfC-Cbonds "3" ;
+                                         v1:hasNumberOfC-Fbonds "11" ;
+                                         v1:hasNumberOfCarbonAtoms "6" ;
+                                         v1:hasSMILES "OC(=O)C(F)(OC(F)(F)C(F)(F)C(F)(F)F)C(F)(F)F" ;
+                                         rdfs:label "Perfluoro-2-methyl-3-oxahexanoic acid" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID8031861
+<http://w3id.org/pfas/v1/DTXSID8031861> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://w3id.org/pfas/v1/PFCAs> ;
+                                        edamontology:data_1172 "67545" ;
+                                        v1:hasAverageMass "614.101" ;
+                                        v1:hasCASRN "307-55-1" ;
+                                        v1:hasCarbonChainLength "12" ;
+                                        v1:hasDTXSID "8031861" ;
+                                        v1:hasFunctionalGroup "Carboxylic acids (-COOH)" ;
+                                        v1:hasInChIKey "CXGONMQFMIYUJR-UHFFFAOYSA-N" ;
+                                        v1:hasNumberOfC-Cbonds "11" ;
+                                        v1:hasNumberOfC-Fbonds "23" ;
+                                        v1:hasNumberOfCarbonAtoms "12" ;
+                                        v1:hasSMILES "OC(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F" ;
+                                        rdfs:label "Perfluorododecanoic acid" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID8031863
+<http://w3id.org/pfas/v1/DTXSID8031863> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://w3id.org/pfas/v1/PFCAs> ;
+                                        edamontology:data_1172 "67821" ;
+                                        v1:hasAverageMass "464.078" ;
+                                        v1:hasCASRN "375-95-1" ;
+                                        v1:hasCarbonChainLength "9" ;
+                                        v1:hasDTXSID "8031863" ;
+                                        v1:hasFunctionalGroup "Carboxylic acids (-COOH)" ;
+                                        v1:hasInChIKey "UZUFPBIDKMEQEQ-UHFFFAOYSA-N" ;
+                                        v1:hasNumberOfC-Cbonds "8" ;
+                                        v1:hasNumberOfC-Fbonds "17" ;
+                                        v1:hasNumberOfCarbonAtoms "9" ;
+                                        v1:hasSMILES "OC(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F" ;
+                                        rdfs:label "Perfluorononanoic acid" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID8031865
+<http://w3id.org/pfas/v1/DTXSID8031865> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://w3id.org/pfas/v1/PFCAs> ;
+                                        edamontology:data_1172 "9554" ;
+                                        v1:hasAverageMass "414.07" ;
+                                        v1:hasCASRN "335-67-1" ;
+                                        v1:hasCarbonChainLength "8" ;
+                                        v1:hasDTXSID "8031865" ;
+                                        v1:hasFunctionalGroup "Carboxylic acids (-COOH)" ;
+                                        v1:hasInChIKey "SNGREZUHAYWORS-UHFFFAOYSA-N" ;
+                                        v1:hasNumberOfC-Cbonds "7" ;
+                                        v1:hasNumberOfC-Fbonds "15" ;
+                                        v1:hasNumberOfCarbonAtoms "8" ;
+                                        v1:hasSMILES "OC(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F" ;
+                                        rdfs:label "Perfluorooctanoic acid" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID8047553
+<http://w3id.org/pfas/v1/DTXSID8047553> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://w3id.org/pfas/v1/PFCAs> ;
+                                        edamontology:data_1172 "77222" ;
+                                        v1:hasAverageMass "564.093" ;
+                                        v1:hasCASRN "2058-94-8" ;
+                                        v1:hasCarbonChainLength "11" ;
+                                        v1:hasDTXSID "8047553" ;
+                                        v1:hasFunctionalGroup "Carboxylic acids (-COOH)" ;
+                                        v1:hasInChIKey "SIDINRCMMRKXGQ-UHFFFAOYSA-N" ;
+                                        v1:hasNumberOfC-Cbonds "10" ;
+                                        v1:hasNumberOfC-Fbonds "21" ;
+                                        v1:hasNumberOfCarbonAtoms "11" ;
+                                        v1:hasSMILES "OC(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F" ;
+                                        rdfs:label "Perfluoroundecanoic acid" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID8059920
+<http://w3id.org/pfas/v1/DTXSID8059920> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://w3id.org/pfas/v1/PFSAs> ;
+                                        edamontology:data_1172 "67820" ;
+                                        v1:hasAverageMass "450.12" ;
+                                        v1:hasCASRN "375-92-8" ;
+                                        v1:hasCarbonChainLength "7" ;
+                                        v1:hasDTXSID "8059920" ;
+                                        v1:hasFunctionalGroup "Sulfonic acid (-SO_H)" ;
+                                        v1:hasInChIKey "OYGQVDSRYXATEL-UHFFFAOYSA-N" ;
+                                        v1:hasNumberOfC-Cbonds "6" ;
+                                        v1:hasNumberOfC-Fbonds "15" ;
+                                        v1:hasNumberOfCarbonAtoms "7" ;
+                                        v1:hasSMILES "OS(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F" ;
+                                        rdfs:label "Perfluoroheptanesulfonic acid" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID8062600
+<http://w3id.org/pfas/v1/DTXSID8062600> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://w3id.org/pfas/v1/PFSAs> ;
+                                        edamontology:data_1172 "75922" ;
+                                        v1:hasAverageMass "350.1" ;
+                                        v1:hasCASRN "2706-91-4" ;
+                                        v1:hasCarbonChainLength "5" ;
+                                        v1:hasDTXSID "8062600" ;
+                                        v1:hasFunctionalGroup "Sulfonic acid (-SO_H)" ;
+                                        v1:hasInChIKey "ACEKLXZRZOWKRY-UHFFFAOYSA-N" ;
+                                        v1:hasNumberOfC-Cbonds "4" ;
+                                        v1:hasNumberOfC-Fbonds "11" ;
+                                        v1:hasNumberOfCarbonAtoms "5" ;
+                                        v1:hasSMILES "OS(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F" ;
+                                        rdfs:label "Perfluoropentanesulfonic acid" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID8071356
+<http://w3id.org/pfas/v1/DTXSID8071356> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://w3id.org/pfas/v1/PFSAs> ;
+                                        edamontology:data_1172 "86998" ;
+                                        v1:hasAverageMass "550.13" ;
+                                        v1:hasCASRN "68259-12-1" ;
+                                        v1:hasCarbonChainLength "9" ;
+                                        v1:hasDTXSID "8071356" ;
+                                        v1:hasFunctionalGroup "Sulfonic acid (-SO_H)" ;
+                                        v1:hasInChIKey "MNEXVZFQQPKDHC-UHFFFAOYSA-N" ;
+                                        v1:hasNumberOfC-Cbonds "8" ;
+                                        v1:hasNumberOfC-Fbonds "19" ;
+                                        v1:hasNumberOfCarbonAtoms "9" ;
+                                        v1:hasSMILES "OS(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F" ;
+                                        rdfs:label "Perfluorononanesulfonic acid" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID80892506
+<http://w3id.org/pfas/v1/DTXSID80892506> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://w3id.org/pfas/v1/PFESAs> ;
+                                         edamontology:data_1172 "22568738" ;
+                                         v1:hasAverageMass "532.58" ;
+                                         v1:hasCASRN "756426-58-1" ;
+                                         v1:hasCarbonChainLength "8" ;
+                                         v1:hasDTXSID "80892506" ;
+                                         v1:hasFunctionalGroup "Sulfonic acid (-SO_H)" ;
+                                         v1:hasInChIKey "GGOUUEMCWBTDMT-UHFFFAOYSA-N" ;
+                                         v1:hasNumberOfC-Cbonds "6" ;
+                                         v1:hasNumberOfC-Fbonds "16" ;
+                                         v1:hasNumberOfCarbonAtoms "8" ;
+                                         v1:hasSMILES "OS(=O)(=O)C(F)(F)C(F)(F)OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)Cl" ;
+                                         rdfs:label "Perfluoro(2-((6-chlorohexyl)oxy)ethanesulfonic acid)" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID90382620
+<http://w3id.org/pfas/v1/DTXSID90382620> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://w3id.org/pfas/v1/FTCAs> ;
+                                         edamontology:data_1172 "2783376" ;
+                                         v1:hasAverageMass "442.124" ;
+                                         v1:hasCASRN "812-70-4" ;
+                                         v1:hasCarbonChainLength "10" ;
+                                         v1:hasDTXSID "90382620" ;
+                                         v1:hasFunctionalGroup "Carboxylic acids (-COOH)" ;
+                                         v1:hasInChIKey "HLBRGVKRZQSQHB-UHFFFAOYSA-N" ;
+                                         v1:hasNumberOfC-Cbonds "9" ;
+                                         v1:hasNumberOfC-Fbonds "15" ;
+                                         v1:hasNumberOfCarbonAtoms "10" ;
+                                         v1:hasSMILES "OC(=O)CCC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F" ;
+                                         rdfs:label "3-(Perfluoroheptyl)propanoic acid" .
+
+
+###  http://w3id.org/pfas/v1/DTXSID90868151
+<http://w3id.org/pfas/v1/DTXSID90868151> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://w3id.org/pfas/v1/PFCAs> ;
+                                         edamontology:data_1172 "3018355" ;
+                                         v1:hasAverageMass "664.109" ;
+                                         v1:hasCASRN "72629-94-8" ;
+                                         v1:hasCarbonChainLength "13" ;
+                                         v1:hasDTXSID "90868151" ;
+                                         v1:hasFunctionalGroup "Carboxylic acids (-COOH)" ;
+                                         v1:hasInChIKey "LVDGGZAZAYHXEY-UHFFFAOYSA-N" ;
+                                         v1:hasNumberOfC-Cbonds "12" ;
+                                         v1:hasNumberOfC-Fbonds "25" ;
+                                         v1:hasNumberOfCarbonAtoms "13" ;
+                                         v1:hasSMILES "OC(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F" ;
+                                         rdfs:label "Perfluorotridecanoic acid" .
+
+
+###  http://w3id.org/pfas/v1/FASAa
+<http://w3id.org/pfas/v1/FASAa> rdf:type owl:Class ;
+                                rdfs:subClassOf <http://w3id.org/comptox/v1/0000004_3> ;
+                                rdfs:label "Perfluoroalkane Sulfonamides" ;
+                                skos:altLabel "FASAa" .
+
+
+###  http://w3id.org/pfas/v1/FTCAs
+<http://w3id.org/pfas/v1/FTCAs> rdf:type owl:Class ;
+                                rdfs:subClassOf <http://w3id.org/comptox/v1/0000004_2> ;
+                                rdfs:label "Fluorotelomer Carboxylic Acids" ;
+                                skos:altLabel "FTCAs" .
+
+
+###  http://w3id.org/pfas/v1/FTSAs
+<http://w3id.org/pfas/v1/FTSAs> rdf:type owl:Class ;
+                                rdfs:subClassOf <http://w3id.org/comptox/v1/0000004_2> ;
+                                rdfs:label "Fluorotelomer Sulfonic Acids" ;
+                                skos:altLabel "FTSAs" .
+
+
+###  http://w3id.org/pfas/v1/N-EtFASAAs
+<http://w3id.org/pfas/v1/N-EtFASAAs> rdf:type owl:Class ;
+                                     rdfs:subClassOf <http://w3id.org/comptox/v1/0000004_4> ;
+                                     rdfs:label "N-Ethyl Perfluoroalkane Sulfonamido Acetic Acids" ;
+                                     skos:altLabel "N-EtFASAAs" .
+
+
+###  http://w3id.org/pfas/v1/N-EtFASAs
+<http://w3id.org/pfas/v1/N-EtFASAs> rdf:type owl:Class ;
+                                    rdfs:subClassOf <http://w3id.org/comptox/v1/0000004_4> ;
+                                    rdfs:label "N-Ethyl Perfluoroalkane Sulfonamides" ;
+                                    skos:altLabel "N-EtFASAs" .
+
+
+###  http://w3id.org/pfas/v1/N-MeFASAAs
+<http://w3id.org/pfas/v1/N-MeFASAAs> rdf:type owl:Class ;
+                                     rdfs:subClassOf <http://w3id.org/comptox/v1/0000004_4> ;
+                                     rdfs:label "N-Methyl Perfluoroalkane Sulfonamido Acetic Acids" ;
+                                     skos:altLabel "N-MeFASAAs" .
+
+
+###  http://w3id.org/pfas/v1/N-MeFASAs
+<http://w3id.org/pfas/v1/N-MeFASAs> rdf:type owl:Class ;
+                                    rdfs:subClassOf <http://w3id.org/comptox/v1/0000004_4> ;
+                                    rdfs:label "N-Methyl Perfluoroalkane Sulfonamides" ;
+                                    skos:altLabel "N-MeFASAs" .
+
+
+###  http://w3id.org/pfas/v1/PFCAs
+<http://w3id.org/pfas/v1/PFCAs> rdf:type owl:Class ;
+                                rdfs:subClassOf <http://w3id.org/comptox/v1/0000004_0> ;
+                                rdfs:label "Per/Polyfluoroalkyl Carboxylic Acids" ;
+                                skos:altLabel "PFCAs" .
+
+
+###  http://w3id.org/pfas/v1/PFECAs
+<http://w3id.org/pfas/v1/PFECAs> rdf:type owl:Class ;
+                                 rdfs:subClassOf <http://w3id.org/comptox/v1/0000004_1> ;
+                                 rdfs:label "Per/Polyfluoroalkyl Ether Carboxylic Acids" ;
+                                 skos:altLabel "PFECAs" .
+
+
+###  http://w3id.org/pfas/v1/PFESAs
+<http://w3id.org/pfas/v1/PFESAs> rdf:type owl:Class ;
+                                 rdfs:subClassOf <http://w3id.org/comptox/v1/0000004_1> ;
+                                 rdfs:label "Perfluoroalkyl Ether Sulfonic Acids" ;
+                                 skos:altLabel "PFESAs" .
+
+
+###  http://w3id.org/pfas/v1/PFSAs
+<http://w3id.org/pfas/v1/PFSAs> rdf:type owl:Class ;
+                                rdfs:subClassOf <http://w3id.org/comptox/v1/0000004_0> ;
+                                rdfs:label "Perfluoroalkyl Sulfonic Acids" ;
+                                skos:altLabel "PFSAs" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+edamontology:data_1172 rdfs:label "hasPubchemCid" .
+
+
+v1:hasDTXSID rdfs:label "hasDTXSID" .
+
+
+###  Generated by the OWL API (version 4.5.24.2023-01-14T21:28:32Z) https://github.com/owlcs/owlapi
