@@ -1,0 +1,155 @@
+@prefix dsstox: <http://w3id.org/DSSTox/v1/> .
+@prefix dsstox-pfas: <http://w3id.org/DSSTox/v1/PFASONT_> .
+
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+
+@base <http://w3id.org/DSSTox/v1/> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+
+###  http://w3id.org/DSSTox/v1/PFASONT_PFASubstance
+dsstox-pfas:PFASubstance rdf:type owl:Class ;
+                rdfs:subClassOf dsstox-pfas:ChemicalEntity ;
+                rdfs:label "Per-/Polyfluoroalkyl Substance" ;
+				skos:altLabel "PFAs" .
+				
+
+########### PerFAS ###################	
+	
+###  http://w3id.org/DSSTox/v1/PFASONT_PerfluoroalkylSubstance
+dsstox-pfas:PerfluoroalkylSubstance rdf:type owl:Class ;
+                rdfs:subClassOf dsstox-pfas:PFASubstance ;
+                rdfs:label "Perfluoroalkyl Acid Substance" ;
+				skos:altLabel "PerFAs" .
+				
+				
+###  http://w3id.org/DSSTox/v1/PFASONT_PFAAs
+dsstox-pfas:PFAAs rdf:type owl:Class ;
+                 rdfs:subClassOf dsstox-pfas:PerfluoroalkylSubstance ;
+                 rdfs:label "Perfluoroalkyl Acid Substance" ;
+				 skos:altLabel "PFAAs" .
+
+
+###  http://w3id.org/DSSTox/v1/PFASONT_PFCAs
+dsstox-pfas:PFCAs rdf:type owl:Class ;
+                 rdfs:subClassOf dsstox-pfas:PFAAs ;
+                 rdfs:label "Perfluoroalkyl Carboxylic Acid Substance" ;
+                 skos:altLabel "PFCAs" .
+
+
+###  http://w3id.org/DSSTox/v1/PFASONT_PFSAs
+dsstox-pfas:PFSAs rdf:type owl:Class ;
+                 rdfs:subClassOf dsstox-pfas:PFAAs ;
+                 rdfs:label "Perfluoroalkyl Sulfonic Acid Substance" ;
+                 skos:altLabel "PFSAs" .
+
+
+###  http://w3id.org/DSSTox/v1/PFASONT_PFEAs
+dsstox-pfas:PFEAs rdf:type owl:Class ;
+                 rdfs:subClassOf dsstox-pfas:PerfluoroalkylSubstance ;
+                 rdfs:label "Perfluoroalkyl Ether Acid Substance" ;
+                 skos:altLabel "PFEAs" .
+
+
+###  http://w3id.org/DSSTox/v1/PFASONT_PFECAs
+dsstox-pfas:PFECAs rdf:type owl:Class ;
+                  rdfs:subClassOf dsstox-pfas:PFEAs ;
+                  rdfs:label "Perfluoroalkyl Ether Carboxylic Acid Substance" ;
+                  skos:altLabel "PFECAs" .
+
+
+###  http://w3id.org/DSSTox/v1/PFASONT_PFESAs
+dsstox-pfas:PFESAs rdf:type owl:Class ;
+                 rdfs:subClassOf dsstox-pfas:PFEAs ;
+                 rdfs:label "Perfluoroalkyl Ether Sulfonic Acid Substance" ;
+                 skos:altLabel "PFESAs" .
+
+
+###  http://w3id.org/DSSTox/v1/PFASONT_FASAa
+dsstox-pfas:FASAa rdf:type owl:Class ;
+                 rdfs:subClassOf dsstox-pfas:PerfluoroalkylSubstance  ;
+                 rdfs:label "Perfluoroalkane Sulfonamides" ;
+                 skos:altLabel "FASAa" .
+
+
+
+###  http://w3id.org/DSSTox/v1/PFASONT_FASAs
+dsstox-pfas:FASAs rdf:type owl:Class ;
+                 rdfs:subClassOf dsstox-pfas:PerfluoroalkylSubstance ;
+                 rdfs:label "Perfluoroalkane Sulfonamido Substance" ;
+                 skos:altLabel "FASAs" .
+
+
+###  http://w3id.org/DSSTox/v1/PFASONT_N-EtFASAs
+dsstox-pfas:N-EtFASAs rdf:type owl:Class ;
+                     rdfs:subClassOf dsstox-pfas:FASAs ;
+                     rdfs:label "N-Ethyl Perfluoroalkane Sulfonamides" ;
+                     skos:altLabel "N-EtFASAs" .
+
+
+###  http://w3id.org/DSSTox/v1/PFASONT_N-MeFASAs
+dsstox-pfas:N-MeFASAs rdf:type owl:Class ;
+                     rdfs:subClassOf dsstox-pfas:FASAs ;
+                     rdfs:label "N-Methyl Perfluoroalkane Sulfonamides" ;
+                     skos:altLabel "N-MeFASAs" .
+					 
+
+###  http://w3id.org/DSSTox/v1/PFASONT_N-EtFASAAs
+dsstox-pfas:N-EtFASAAs rdf:type owl:Class ;
+                      rdfs:subClassOf dsstox-pfas:FASAs ;
+                      rdfs:label "N-Ethyl Perfluoroalkane Sulfonamido Acetic Acid Substance" ;
+                      skos:altLabel "N-EtFASAAs" .
+
+
+
+
+###  http://w3id.org/DSSTox/v1/PFASONT_N-MeFASAAs
+dsstox-pfas:N-MeFASAAs rdf:type owl:Class ;
+                      rdfs:subClassOf dsstox-pfas:FASAs ;
+                      rdfs:label "N-Methyl Perfluoroalkane Sulfonamido Acetic Acid Substance" ;
+                      skos:altLabel "N-MeFASAAs" .
+
+
+
+
+########### PolyFAS ###################
+
+###  http://w3id.org/DSSTox/v1/PFASONT_PolyfluoroalkylSubstance
+dsstox-pfas:PolyfluoroalkylSubstance rdf:type owl:Class ;
+                rdfs:subClassOf dsstox-pfas:PFASubstance ;
+                rdfs:label "Polyfluoroalkyl Acid Substance" ;
+				skos:altLabel "PolyFAs" .
+
+
+###  http://w3id.org/DSSTox/v1/PFASONT_FTs
+dsstox-pfas:FTs rdf:type owl:Class ;
+                rdfs:subClassOf dsstox-pfas:PolyfluoroalkylSubstance ;
+                rdfs:label "Fluorotelomer Substance" ;
+				skos:altLabel "FTs" .
+
+				 
+				 
+###  http://w3id.org/DSSTox/v1/PFASONT_FTCAs
+dsstox-pfas:FTCAs rdf:type owl:Class ;
+                 rdfs:subClassOf dsstox-pfas:FTs ;
+                 rdfs:label "Fluorotelomer Carboxylic Acid" ;
+                 skos:altLabel "FTCAs" .
+
+
+###  http://w3id.org/DSSTox/v1/PFASONT_FTSAs
+dsstox-pfas:FTSAs rdf:type owl:Class ;
+                 rdfs:subClassOf dsstox-pfas:FTs ;
+                 rdfs:label "Fluorotelomer Sulfonic Acid" ;
+                 skos:altLabel "FTSAs" .
+
+
+
+
